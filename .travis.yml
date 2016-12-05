@@ -1,12 +1,17 @@
 sudo: required
-
 language: bash
-
 services:
-  - docker
-
+- docker
 before_install:
-    - docker build --build-arg VUID=`id -u` -t ronin/arch-kernel .
-    - mkdir deploy
-    - docker run -v $PWD/deploy:/deploy ronin/arch-kernel 
-
+- docker build --build-arg VUID=`id -u` -t ronin/arch-kernel .
+- mkdir deploy
+- docker run -v $PWD/deploy:/deploy ronin/arch-kernel
+deploy:
+  provider: s3
+  file_glob: true
+  access_key_id: AKIAI2OL4M4V6OG5MC5Q
+  file: deploy/*
+  secret_access_key:
+    secure: oaCdrp7qBgWKAJ64xUIIb1jxQ+4vMaYghrwOajvRcmL1ZEisf0slJsrgafsvVDKqg+JwJUpsBxe+YO70OVnAv0C4CfgDvv4XQ2pVqLjvC7EDeftglJM3KtFVJPQkUaQc9s/8tjzfw5bPtOdupd+0uutNmI1TAWxHOJ8JwHT7w3GoVqkNw1l84ygf5pc0hNgKNG7XkcnsqGqKUORaCWIOvIaB5XkeviwNUEjC/4BOlqPU8bbtvKKP36+hv/buYTxL27msvpqpCc/pr6Nj+mZ0/4DGWN7qNBayHaagfFdgZlnglmeuH+QLIvqWiQxYeIepePMYfnP29HO6G1slPqP/hTxe9SC8mGePbhXtSyEaUumRD1C0Wzaifd4lc0BS3n11BwH4BwQjLdMnXicZKnchCj/hbT+16SweYOFwB/FuinO/MD+POqAqo7kQbPmPU3Qyq5v/wRucyuYeGIcDumEl0O4In8f1yWMMjiRZNmA5DDb5J2QXCJCAgAzT8DRK5/C5aZESCRZsylxYsUvFkDuYI08EqHaw636Fa8YtNG5Ukb2ACDnvTTMNUozFOIUIpRkrRMxkbPOi5TPr58Ctpu3GrEPYLKRH2i4W3EmsrygifqwNRZx4oBg6lNqPrF4W2M38oTjEfePpaffDyP4N9a+5U95Ti3BNpqGzrWGx1orNBjo=
+  bucket: krnl.blds
+  acl: ''
