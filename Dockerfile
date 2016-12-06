@@ -4,7 +4,7 @@ MAINTAINER Raghavendra Prabhu <me@rdprabhu.com>
 
 ARG VUID=1000
 
-RUN pacman -S --noconfirm base-devel wget  xmlto docbook-xsl kmod inetutils bc libelf
+RUN pacman -S --noconfirm base-devel wget  xmlto docbook-xsl kmod inetutils bc libelf python ncurses
 RUN usermod -u $VUID -d /home/nobody  -s /bin/bash nobody
 RUN install -d -m 0755 -o nobody /home/nobody 
 
