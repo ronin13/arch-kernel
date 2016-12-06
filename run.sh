@@ -1,6 +1,6 @@
 #!/bin/bash
 dest=$1
-rm *.pkg.tar.gz
+rm *.pkg.tar.*
 export MAKEFLAGS=-j2
 export CFLAGS='-march=x86-64 -O2 -pipe'
 export CXXFLAGS='-march=x86-64 -O2 -pipe'
