@@ -4,16 +4,15 @@ MAINTAINER Raghavendra Prabhu <me@rdprabhu.com>
 
 ARG VUID=1000
 
-RUN pacman -S --noconfirm base-devel wget  xmlto docbook-xsl kmod inetutils bc libelf abs
+RUN pacman -S --noconfirm base-devel wget  xmlto docbook-xsl kmod inetutils bc libelf
 RUN usermod -u $VUID -d /home/nobody  -s /bin/bash nobody
 RUN install -d -m 0755 -o nobody /home/nobody 
-RUN abs 
 
 WORKDIR /home/nobody
 USER nobody
 
-RUN cp -a /var/abs/core/linux .
-WORKDIR linux 
+RUN wget -O - https://git.archlinux.org/svntogit/packages.git/snapshot/packages-packages/linux.tar.gz | tar zxf -
+WORKDIR packages-packages/linux/repos/core-x86_64
 
 ADD run.sh /run.sh
 ADD config.localmodconfig config.x86_64
