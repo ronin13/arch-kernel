@@ -14,4 +14,4 @@ cd  packages-packages/htop/repos/extra-x86_64/
 
 ls
 ls /home/nobody/*
-cp -v *.pkg.tar *.pkg.tar.gz $dest/
+cp -v *.pkg.tar.* $dest/
