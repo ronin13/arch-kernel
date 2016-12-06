@@ -6,7 +6,7 @@ before_install:
 - docker build --build-arg VUID=`id -u` -t ronin/arch-kernel .
 - pwd && ls
 - mkdir deploy
-- docker run -v $PWD/deploy:/deploy ronin/arch-kernel
+- docker run -v $PWD/patches:/patches -v $PWD/deploy:/deploy ronin/arch-kernel
 deploy:
   provider: releases
   file_glob: true
