@@ -17,6 +17,7 @@ WORKDIR linux
 
 ADD run.sh /run.sh
 ADD config.localmodconfig config.x86_64
+ADD PKGBUILD PKGBUILD
 
 VOLUME /deploy
 
