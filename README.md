@@ -1,4 +1,4 @@
-Arch kernel build CI
+Arch kernel build CI ![images/logo.png](arch logo) ![images/tux.png](tux)
 ---------
 [![Build Status](https://travis-ci.org/ronin13/arch-kernel.svg?branch=master)](https://travis-ci.org/ronin13/arch-kernel)
 
