@@ -8,11 +8,10 @@ before_install:
 - mkdir deploy
 - docker run -v $PWD/deploy:/deploy ronin/arch-kernel
 deploy:
-  provider: s3
+  provider: releases
   file_glob: true
-  access_key_id: AKIAI2OL4M4V6OG5MC5Q
-  file: deploy/*
-  secret_access_key:
-    secure: oaCdrp7qBgWKAJ64xUIIb1jxQ+4vMaYghrwOajvRcmL1ZEisf0slJsrgafsvVDKqg+JwJUpsBxe+YO70OVnAv0C4CfgDvv4XQ2pVqLjvC7EDeftglJM3KtFVJPQkUaQc9s/8tjzfw5bPtOdupd+0uutNmI1TAWxHOJ8JwHT7w3GoVqkNw1l84ygf5pc0hNgKNG7XkcnsqGqKUORaCWIOvIaB5XkeviwNUEjC/4BOlqPU8bbtvKKP36+hv/buYTxL27msvpqpCc/pr6Nj+mZ0/4DGWN7qNBayHaagfFdgZlnglmeuH+QLIvqWiQxYeIepePMYfnP29HO6G1slPqP/hTxe9SC8mGePbhXtSyEaUumRD1C0Wzaifd4lc0BS3n11BwH4BwQjLdMnXicZKnchCj/hbT+16SweYOFwB/FuinO/MD+POqAqo7kQbPmPU3Qyq5v/wRucyuYeGIcDumEl0O4In8f1yWMMjiRZNmA5DDb5J2QXCJCAgAzT8DRK5/C5aZESCRZsylxYsUvFkDuYI08EqHaw636Fa8YtNG5Ukb2ACDnvTTMNUozFOIUIpRkrRMxkbPOi5TPr58Ctpu3GrEPYLKRH2i4W3EmsrygifqwNRZx4oBg6lNqPrF4W2M38oTjEfePpaffDyP4N9a+5U95Ti3BNpqGzrWGx1orNBjo=
-  bucket: krnl.blds
-  acl: ''
+  api_key:
+    secure: uR9sHO/9htkHGmIfh8ak+XEOALZt7cxe6foSDN/IpiO8FzOOU2Z3OopCVmbYf9aERkhjv411h3UJOByRuXCERgqA4Wb8wpRVQueyBYeCAjLDvBShj/wfa/yvIKsgxFO3vuqv/Uc2NSbfYJhPD6bVwUnAxaT/0y+MgmCPeyqNrWK46Xr0k2jO5rS6qH5TOtiP2WwtOQZ8b5mEoumDzycss31+m4DI28R3jA9hHVaHgSRNABSp2PKrNOQoS4DgRUW3neJBbg1LmibK2VQxMhZOJvKQOUewwn+HvFpZ/bHIKP0oBEeukvP7tZwpy+Hi7zs/SoPARE/XrbKFpW2DSErqU/f+lsG5njeOVRUti4W8fPAQ4AQ0h6HgEH9yctcEYO40au1YP766QNiaNk5JK3QU13QGFhDELNFiXCHArTIcbag7d4VfWo2dXUHefPA7QdSfu8t+neuUb6WikukqnyGRgN2mocLnAyjF8EtV8kJXA2JMghYJv6so6b2/PHVzUQwJmta4kcrg1/0wfrc1ZoSkQAOw96lSqyiHbRD19dlw7mSMPtwJLx7Z/BD1YEv42u4xQ7UwFUc0oPiSv4CG4MPYIPSKGrmsFkUxVwwu22W6ng7co+AErkRZCw1FyLJeoooDOsFQIOXK/vx/eF20TB6jMhrHMN6J9QEJnxJjFFg/WO4=
+  file: "deploy/*"
+  on:
+    repo: ronin13/arch-kernel
