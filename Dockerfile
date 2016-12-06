@@ -16,6 +16,7 @@ RUN cp -a /var/abs/core/linux .
 WORKDIR linux 
 
 ADD run.sh /run.sh
+ADD config config.x86_64
 
 VOLUME /deploy
 
