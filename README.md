@@ -1,6 +1,6 @@
-Arch kernel build CI ![arch logo](images/logo.png) ![tux](images/tux.png)
+Arch kernel build CI 
 ---------
-[![Build Status](https://travis-ci.org/ronin13/arch-kernel.svg?branch=master)](https://travis-ci.org/ronin13/arch-kernel)
+[![Build Status](https://travis-ci.org/ronin13/arch-kernel.svg?branch=master)](https://travis-ci.org/ronin13/arch-kernel) ![arch logo](images/logo.png) ![tux](images/tux.png)
 
 - Files in this tree are used to build Archlinux kernel on Travis CI. 
 - The build runs inside a docker container. 
