@@ -15,6 +15,9 @@ Arch kernel build CI
         - This ensures the nobody user has same uid both inside and outside the container.
 - Built pkg.tar.xz is uploaded to github releases.
 
+### Note
+Patches in patches/ directory are my local fixes and workarounds, and may not hold much interest to others.
+
 ## More
 
 Pull requests and forks welcome!
