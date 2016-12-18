@@ -24,7 +24,6 @@ source=("https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         # standard config files for mkinitcpio ramdisk
         'linux.preset'
         'change-default-console-loglevel.patch'
-        'fix_race_condition_in_packet_set_ring.diff'
         'net_handle_no_dst_on_skb_in_icmp6_send.patch'
         )
 
