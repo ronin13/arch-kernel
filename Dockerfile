@@ -1,5 +1,11 @@
 FROM pritunl/archlinux:latest
-LABEL description="Dockerfile to build linux kernel" version="0.0.1"
+ARG VCS_REF
+ARG BUILD_DATE
+LABEL org.label-schema.description="Dockerfile to build linux kernel"  \
+      org.label-schema.version="0.0.2" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/ronin13/arch-kernel" \
+      org.label-schema.build-date=$BUILD_DATE
 MAINTAINER Raghavendra Prabhu <me@rdprabhu.com>
 
 ARG VUID=1000
