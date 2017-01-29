@@ -27,9 +27,9 @@ source=("https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         '0001-x86-fpu-Fix-invalid-FPU-ptrace-state-after-execve.patch'
         )
 
-sha256sums=('3e9150065f193d3d94bcf46a1fe9f033c7ef7122ab71d75a7fb5a2f0c9a7e11a'
+sha256sums=('029098dcffab74875e086ae970e3828456838da6e0ba22ce3f64ef764f3d7f1a'
             'SKIP'
-            'cdeff3a6e0dc3d6189d1b1d4d6318f0942b9a28409491cf65592879e4c42b1f7'
+            'cd0d5ea27c487a7d1354ba3e80f85af4924b77ad1180f1fbfaf6844ae03c8728'
             'SKIP'
             'SKIP'
             'SKIP'
